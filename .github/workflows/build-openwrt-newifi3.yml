@@ -93,7 +93,9 @@ jobs:
         $GITHUB_WORKSPACE/$DIY_P2_SH
         sed -i 's/192.168.1.1/192.168.100.2/g' package/base-files/files/bin/config_generate
         #sed -i '/+kmod-dm/ s/$/ +libselinux +libsepol/' feeds/packages/utils/lvm2/Makefile
-
+        DateTime=`date`
+        sed -i "699 a \\\t\t<tr><td width="33%">编译时间<\/td><td>$DateTime<\/td><\/tr>" feeds/luci/modules/luci-mod-admin-full/luarc/view/admin_status/index.htm
+        
     - name: SSH connection to Actions
       uses: P3TERX/ssh2actions@v1.0.0
       if: (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false') || contains(github.event.action, 'ssh')
