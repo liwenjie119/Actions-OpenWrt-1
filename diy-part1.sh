@@ -18,4 +18,4 @@ sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.
 git clone https://github.com/rufengsuixing/luci-app-adguardhome package/myapp/luci-app-adguardhome
 git clone https://github.com/2512500960/zzu-minieap-openwrt package/myapp/zzu-minieap-openwrt
 git clone https://github.com/tty228/luci-app-serverchan package/myapp/luci-app-serverchan
-git clone https://github.com/liwenjie119/luci-app-koolproxyR package/myapp/luci-app-koolproxyR
+git clone https://github.com/project-lede/luci-app-godproxy package/myapp/luci-app-godproxy
